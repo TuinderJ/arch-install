@@ -13,7 +13,11 @@ cd arch-install
 
 # NVIM config
 if [ ! -d ~/.config/nvim ]; then
-  cp .dotfiles/nvim ~/.config/nvim
+  echo "Would you like to setup neovim? [Y/n]"
+  read answer
+  if [ $answer = "Y" ] || [ $answer = "" ]; then
+    cp .dotfiles/nvim ~/.config/nvim
+  fi
 fi
 
 # TMUX config
