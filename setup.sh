@@ -1,30 +1,25 @@
 # Ask the user what he would like to setup.
+package_list="git"
 echo "Would you like to setup neovim? [Y/n]"
 read should_install_neovim
 if [ "$should_install_neovim" == "y" ] || [ "$should_install_neovim" == "Y" ] || [ "$should_install_neovim" == "" ]; then
-  should_install_neovim=1
-else
-  should_intall_neovim=0
+  package_list="$package_list neovim"
 fi
 
 echo "Would you like to setup tmux? [Y/n]"
 read should_install_tmux
 if [ "$should_install_tmux" == "y" ] || [ "$should_install_tmux" == "Y" ] || [ "$should_install_tmux" == "" ]; then
-  should_install_tmux=1
-else
-  should_intall_tmux=0
-# Install the packages the user asked for 
-package_list="git"
-if [ "$should_install_tmux" == 1 ]; then
   package_list="$package_list tmux"
 fi
-sudo pacman -S $package_list
 
 # Paru
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 cd ..
+
+# Install the packages the user asked for 
+sudo paru -S $package_list
 
 # Clone this repo
 cd ~
