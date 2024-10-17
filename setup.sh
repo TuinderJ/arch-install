@@ -4,6 +4,7 @@ sudo pacman -S git neovim tmux
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
+cd ..
 
 # Clone this repo
 cd ~
