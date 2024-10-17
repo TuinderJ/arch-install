@@ -6,12 +6,12 @@ git clone https://github.com/TuinderJ/arch-install.git
 cd arch-install
 
 # NVIM config
-if [ ! -e ~/.config/nvim ]; then
+if [ ! -d ~/.config/nvim ]; then
   echo "neovim config does not exist"
 fi
 
 # TMUX config
-if [ ! -d ~/.tmux.conf ]; then
+if [ ! -e ~/.tmux.conf ]; then
   cp .dotfiles/.tmux.conf ~/.tmux.conf
 fi
 
