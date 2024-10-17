@@ -1,24 +1,17 @@
-# git
-if [ ! -e /bin/git ]
-then
-  sudo pacman -S git
-fi
+sudo pacman -S git neovim tmux
 
 # Clone this repo
 cd ~
 git clone https://github.com/TuinderJ/arch-install.git
 cd arch-install
 
-# NVIM
-
-# TMUX
-if [ ! -e /bin/tmux ]
-then
-  sudo pacman -S tmux
+# NVIM config
+if [ ! -e ~/.config/nvim ]; then
+  echo "neovim config does not exist"
 fi
 
-if [ ! -e ~/.tmux.conf ]
-then
+# TMUX config
+if [ ! -e ~/.tmux.conf ]; then
   cp .dotfiles/.tmux.conf ~/.tmux.conf
 fi
 
