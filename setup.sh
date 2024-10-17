@@ -12,6 +12,12 @@ if [ "$should_install_tmux" == "y" ] || [ "$should_install_tmux" == "Y" ] || [ "
   package_list="$package_list tmux"
 fi
 
+echo "Would you like to install fastfetch? [Y/n]"
+read should_install_fastfetch
+if [ "$should_install_fastfetch" == "y" ] || [ "$should_install_fastfetch" == "Y" ] || [ "$should_install_fastfetch" == "" ]; then
+  package_list="$package_list fastfetch"
+fi
+
 # Paru
 git clone https://aur.archlinux.org/paru.git
 cd paru
