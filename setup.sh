@@ -1,3 +1,5 @@
+# TODO hyprland with gbar
+# TODO find and replace in files. change in /etc/pacman.conf #Color -> Color. change in /etc/paru.conf #BottomUp -> BottomUp
 # Ask the user what he would like to setup.
 package_list="git"
 echo "Would you like to setup neovim? [Y/n]"
