@@ -1,5 +1,10 @@
 sudo pacman -S git neovim tmux
 
+# Paru
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
 # Clone this repo
 cd ~
 git clone https://github.com/TuinderJ/arch-install.git
@@ -7,7 +12,7 @@ cd arch-install
 
 # NVIM config
 if [ ! -d ~/.config/nvim ]; then
-  echo "neovim config does not exist"
+  cp .dotfiles/nvim ~/.config/nvim
 fi
 
 # TMUX config
