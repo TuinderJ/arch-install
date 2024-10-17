@@ -11,7 +11,7 @@ if [ ! -e ~/.config/nvim ]; then
 fi
 
 # TMUX config
-if [ ! -e ~/.tmux.conf ]; then
+if [ ! -d ~/.tmux.conf ]; then
   cp .dotfiles/.tmux.conf ~/.tmux.conf
 fi
 
