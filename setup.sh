@@ -18,5 +18,5 @@ if [ -e ~/.tmux.conf ]
 then
   echo "TMux config file exists"
 else
-  echo "TMux config file does not exist"
+  curl -fsSL https://github.com/TuinderJ/arch-install/raw/refs/heads/main/.dotfiles/tmux.conf -o ~/.tmux.conf
 fi
