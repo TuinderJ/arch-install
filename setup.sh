@@ -6,6 +6,9 @@ if [ -f /etc/os-release ] && ! grep -q 'ID=arch' /etc/os-release; then
   exit 1
 fi
 
+# Configs
+cd ~/arch-install/
+
 # NVIM config
 cp .dotfiles/nvim ~/.config/
 cp .dotfiles/.vimrc ~/

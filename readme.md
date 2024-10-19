@@ -14,7 +14,7 @@ rm -rf paru
 ```
 
 ```
-paru -S gbar nerd-fonts brave discord lutris chili-sddm-theme
+paru -S gbar nerd-fonts brave discord lutris chili-sddm-theme btop bolt-launcher
 ```
 
 ```
