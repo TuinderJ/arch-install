@@ -16,10 +16,12 @@ if ! [ -f /bin/nvim ]; then
   fi
 fi
 
-echo "Would you like to setup tmux? [Y/n]"
-read should_install_tmux
-if [ "$should_install_tmux" == "y" ] || [ "$should_install_tmux" == "Y" ] || [ "$should_install_tmux" == "" ]; then
-  package_list="$package_list tmux"
+if ! [ -f /bin/tmux ]; then
+  echo "Would you like to setup tmux? [Y/n]"
+  read should_install_tmux
+  if [ "$should_install_tmux" == "y" ] || [ "$should_install_tmux" == "Y" ] || [ "$should_install_tmux" == "" ]; then
+    package_list="$package_list tmux"
+  fi
 fi
 
 echo "Would you like to install fastfetch? [Y/n]"
