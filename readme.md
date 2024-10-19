@@ -1,11 +1,6 @@
 # Arch Setup
 
 ```
-sudo pacman -Syu
-sudo pacman -S git neovim tmux steam samba
-```
-
-```
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
@@ -14,7 +9,8 @@ rm -rf paru
 ```
 
 ```
-paru -S gbar nerd-fonts brave discord lutris chili-sddm-theme btop bolt-launcher
+sudo pacman -Syu
+paru -S gbar nerd-fonts brave discord lutris chili-sddm-theme btop bolt-launcher neovim tmux steam samba
 ```
 
 ```
