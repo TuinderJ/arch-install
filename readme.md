@@ -1,7 +1,8 @@
 # Arch Setup
 
 ```
-sudo pacman -S git neovim tmux
+sudo pacman -Syu
+sudo pacman -S git neovim tmux steam
 ```
 
 ```
@@ -10,6 +11,10 @@ cd paru
 makepkg -si
 cd ..
 rm -rf paru
+```
+
+```
+paru -S gbar nerd-fonts brave discord lutris chili-sddm-theme
 ```
 
 ```
