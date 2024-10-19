@@ -16,6 +16,9 @@ cd ~/arch-install/
 # Hyprland
 cp .dotfiles/hyprland.conf ~/.config/hypr/hyprland.conf
 
+# gBar
+cp .dotfiles/gBar ~/.config/gBar/config
+
 # SDDM
 sudo cp .dotfiles/sddm.conf /etc/sddm.conf
 
