@@ -10,7 +10,7 @@ rm -rf paru
 
 ```
 sudo pacman -Syu
-paru -S gbar nerd-fonts brave discord lutris chili-sddm-theme btop bolt-launcher neovim tmux steam samba
+paru -S gbar nerd-fonts brave discord lutris chili-sddm-theme btop bolt-launcher neovim tmux steam samba xclip
 ```
 
 ```
