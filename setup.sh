@@ -6,16 +6,31 @@ if [ -f /etc/os-release ] && ! grep -q 'ID=arch' /etc/os-release; then
   exit 1
 fi
 
-# Configs
 cd ~/arch-install/
+# ============================================================
+# ============================================================
+# Configs
+# ============================================================
+# ============================================================
 
-# NVIM config
-cp .dotfiles/nvim ~/.config/
+# Hyprland
+cp .dotfiles/hyprland.conf ~/.config/hypr/hyprland.conf
+
+# SDDM
+sudo cp .dotfiles/sddm.conf /etc/sddm.conf
+
+# NVIM
+cp -r .dotfiles/nvim ~/.config/
 cp .dotfiles/.vimrc ~/
 
-# TMUX config
+# TMUX
 cp .dotfiles/.tmux.conf ~/.tmux.conf
 
+# ============================================================
+# ============================================================
+#
+# ============================================================
+# ============================================================
 # Clean up this repo on the local machine
-cd ..
-rm -rf arch-install
+# cd ..
+# rm -rf arch-install
