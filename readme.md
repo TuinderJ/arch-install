@@ -2,7 +2,7 @@
 
 ```
 sudo pacman -Syu
-sudo pacman -S git neovim tmux steam
+sudo pacman -S git neovim tmux steam samba
 ```
 
 ```
