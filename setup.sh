@@ -24,10 +24,12 @@ if ! [ -f /bin/tmux ]; then
   fi
 fi
 
-echo "Would you like to install fastfetch? [Y/n]"
-read should_install_fastfetch
-if [ "$should_install_fastfetch" == "y" ] || [ "$should_install_fastfetch" == "Y" ] || [ "$should_install_fastfetch" == "" ]; then
-  package_list="$package_list fastfetch"
+if ! [ -f /bin/fastfetch ]; then
+  echo "Would you like to install fastfetch? [Y/n]"
+  read should_install_fastfetch
+  if [ "$should_install_fastfetch" == "y" ] || [ "$should_install_fastfetch" == "Y" ] || [ "$should_install_fastfetch" == "" ]; then
+    package_list="$package_list fastfetch"
+  fi
 fi
 
 # Install the packages the user asked for 
